@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<deployment>
+    <cluster kfactor="0" sitesperhost="16"/>
+    <partition-detection/>
+    <heartbeat/>
+    <ssl/>
+    <httpd enabled="true">
+        <jsonapi enabled="true"/>
+    </httpd>
+    <snapshot enabled="false"/>
+    <commandlog enabled="false">
+        <frequency/>
+    </commandlog>
+    <systemsettings>
+        <temptables/>
+        <snapshot/>
+        <elastic/>
+        <query/>
+        <procedure/>
+        <resourcemonitor>
+            <memorylimit/>
+        </resourcemonitor>
+    </systemsettings>
+    <security/>
+    <import>
+        <configuration type="kafka" format="csv" enabled="true">
+            <property name="brokers">34.226.209.194:9092</property>
+            <property name="topics">test-1</property>
+            <property name="procedure">insert_to_dummy_data</property>
+        </configuration>
+    </import>
+</deployment>
